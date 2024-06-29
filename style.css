@@ -1,0 +1,74 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+    --color1: #8b65b6;
+    --color2: #ae93cc;
+    --operator: #38086e;
+    --background: #e1d5ec;
+    --shadow: #827391c9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+}
+
+.container{
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px 20px 20px;
+    background: var(--color2);
+    box-shadow: 2px 2px 10px var(--shadow);
+}
+
+.display{
+    height: 70px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    text-align: right;
+    margin: 10px 0px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    background: white;
+    color: black;
+    pointer-events: none;
+}
+
+.buttons{
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons button{
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+    background-color: var(--color1);
+}
+
+.operator{
+    color: var(--operator);
+}
+
+.buttons button:active{
+    transform: scale(0.97);
+}
